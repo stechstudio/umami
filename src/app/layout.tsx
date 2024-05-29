@@ -12,7 +12,7 @@ export default function ({ children }) {
   return (
     <html lang="en" data-scroll="0">
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -33,7 +33,7 @@ export default function ({ children }) {
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Umami',
-    default: 'Umami',
+    template: `%s | ${process.env.NEXT_PUBLIC_CUSTOM_TITLE || 'Umami'}`,
+    default: process.env.NEXT_PUBLIC_CUSTOM_TITLE || 'Umami',
   },
 };
